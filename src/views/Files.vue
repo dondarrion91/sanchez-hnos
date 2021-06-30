@@ -181,7 +181,7 @@ export default {
         },
         rowClicked(row) {
             window.open(
-                process.env.VUE_APP_API_URL +
+                "https://inmobiliaria-sanchezhnos.herokuapp.com/api/v1/" +
                     `downloadFiles?file=${row.archivo}&type=${this.clientType}`,
                 "_blank"
             );
@@ -191,7 +191,7 @@ export default {
             this.emptyMessage = "Cargando registros";
 
             fetch(
-                process.env.VUE_APP_API_URL +
+                "https://inmobiliaria-sanchezhnos.herokuapp.com/api/v1/" +
                     "files?type=" +
                     clientType +
                     "&dni=" +

@@ -13,7 +13,7 @@ const routes = [
     },
     {
         path: "/files",
-        name: "Files",
+        name: "files",
         component: Files,
     },
 ];

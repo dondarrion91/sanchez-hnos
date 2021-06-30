@@ -85,7 +85,7 @@ export default {
                 return;
             }
 
-            router.push("Files");
+            router.push("files");
         },
     },
 };

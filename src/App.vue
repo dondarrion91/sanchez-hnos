@@ -1,15 +1,21 @@
 <template>
-    <div id="app">
+    <div id="app" class="app-background">
         <h1 class="text-center my-4 d-none">Sánchez Hmnos</h1>
-        <img class="d-block mx-auto" id="app-logo" src="./assets/logo.jpeg" alt="sanchez hnos">
+        <img
+            class="d-block mx-auto"
+            id="app-logo"
+            src="./assets/logo.jpeg"
+            alt="sanchez hnos"
+        />
+        <p class="h3 text-center mb-4">Autogestión</p>
         <router-view />
     </div>
 </template>
 
 <style scope="scss">
 html,
-#app {
-    background: #0A1531;
+.app-background {
+    background: #0a1531 !important;
 }
 
 h1,

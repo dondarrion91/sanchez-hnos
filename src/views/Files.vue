@@ -45,12 +45,14 @@
         </b-container>
 
         <b-button
+            v-if="showTour"
             class="fixed-top mx-3 mt-4"
             type="click"
             @click.prevent="$tours['myTour'].start()"
             variant="primary"
-            >Iniciar Tour</b-button
+            >Mostrame como funciona</b-button
         >
+
         <v-tour name="myTour" :steps="steps">
             <template slot-scope="tour">
                 <transition name="fade">
@@ -146,10 +148,17 @@ export default {
                     header: {
                         title: "Fecha",
                     },
-                    content: `Fecha correspondiente al mes de alquiler`,
+                    content: `Fecha correspondiente al comprobante o archivo.`,
                 },
                 {
                     target: "thead > tr:nth-child(1) > th:nth-child(4)",
+                    header: {
+                        title: "Tipo",
+                    },
+                    content: `Numero de comprobante`,
+                },
+                {
+                    target: "thead > tr:nth-child(1) > th:nth-child(5)",
                     header: {
                         title: "Tipo",
                     },
@@ -164,6 +173,16 @@ export default {
                 },
             ],
         };
+    },
+
+    computed: {
+        showTour() {
+            if (this.rows !== 0) {
+                return true;
+            }
+
+            return false;
+        },
     },
 
     created() {
@@ -205,6 +224,8 @@ export default {
                     if (!data.files.length) {
                         this.emptyMessage = "No hay archivos para mostrar";
                     }
+
+                    console.log(this.rows);
 
                     this.items = data.files;
                     this.rows = data.files.length;

@@ -60,8 +60,7 @@
                         1 - ingresa con tu DNI
                     </li>
                     <li class="list-group-item list-group-item-primary">
-                        2 - Selecciona que tu situación o tipo de cliente que
-                        sos
+                        2 - Selecciona que tipo de cliente que sos
                     </li>
                     <li class="list-group-item list-group-item-primary">
                         3 - El proceso puede demorar unos segundos, dependiendo
@@ -94,7 +93,7 @@ export default {
             localStorage.setItem(
                 "clientData",
                 JSON.stringify({
-                    dni: this.form.dni,
+                    dni: this.form.dni.trim(),
                     type: this.form.type,
                 })
             );

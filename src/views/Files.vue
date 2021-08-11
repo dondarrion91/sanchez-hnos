@@ -200,7 +200,7 @@ export default {
         },
         rowClicked(row) {
             window.open(
-                "https://inmobiliaria-sanchezhnos.herokuapp.com/api/v1/" +
+                "https://sanchezhnos-back.herokuapp.com/api/v1/" +
                     `downloadFiles?file=${row.archivo}&type=${this.clientType}`,
                 "_blank"
             );
@@ -210,7 +210,7 @@ export default {
             this.emptyMessage = "Cargando registros";
 
             fetch(
-                "https://inmobiliaria-sanchezhnos.herokuapp.com/api/v1/" +
+                "https://sanchezhnos-back.herokuapp.com/api/v1/" +
                     "files?type=" +
                     clientType +
                     "&dni=" +

@@ -200,7 +200,7 @@ export default {
         },
         rowClicked(row) {
             window.open(
-                "https://sanchezhnos-back.herokuapp.com/api/v1/" +
+                "https://sanchezhnos-back-5fb16c5ac004.herokuapp.com/" +
                     `downloadFiles?file=${row.archivo}&type=${this.clientType}`,
                 "_blank"
             );
@@ -210,7 +210,7 @@ export default {
             this.emptyMessage = "Cargando registros";
 
             fetch(
-                "https://sanchezhnos-back.herokuapp.com/api/v1/" +
+                "https://sanchezhnos-back-5fb16c5ac004.herokuapp.com/" +
                     "files?type=" +
                     clientType +
                     "&dni=" +
